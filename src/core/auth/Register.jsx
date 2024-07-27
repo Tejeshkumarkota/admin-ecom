@@ -14,7 +14,7 @@ export default function Register() {
         <div className="card">
           <div className="card-body register-card-body">
             <p className="login-box-msg">Register</p>
-            <form action="../../index.html" method="post">
+            <form method="post">
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -79,9 +79,9 @@ export default function Register() {
                 </div>
                 {/* /.col */}
                 <div className="col-4">
-                  <button type="submit" className="btn btn-primary btn-block">
+                  <Link to={RouteConstants.LOGIN} type="submit" className="btn btn-primary btn-block">
                     Register
-                  </button>
+                  </Link>
                 </div>
                 {/* /.col */}
               </div>
