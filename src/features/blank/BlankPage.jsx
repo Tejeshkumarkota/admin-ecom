@@ -1,23 +1,29 @@
 import React from "react";
-import MainLayout from "./MainLayout";
+import { Link } from "react-router-dom";
+import Footer from "../../shared/_components/Footer";
+import HeaderNav from "../../shared/_components/HeaderNav";
+import Sidebar from "../../shared/_components/Sidebar";
+import { RouteConstants } from "../../shared/constants/RouteConstants";
 
-export default function Dashboard() {
-  let pageTitle = "Dashboard";
+export default function BlankPage() {
   return (
     <>
-      <MainLayout>
+      <div className="wrapper">
+        <HeaderNav/>
+        <Sidebar/>
+        {/* Content Wrapper. Contains page content */}
         <div className="content-wrapper">
           {/* Content Header (Page header) */}
           <section className="content-header">
             <div className="container-fluid">
               <div className="row mb-2">
                 <div className="col-sm-6">
-                  <h1>{pageTitle}</h1>
+                  <h1>Blank Page</h1>
                 </div>
                 <div className="col-sm-6">
                   <ol className="breadcrumb float-sm-right">
                     <li className="breadcrumb-item">
-                      <a href="#">Home</a>
+                      <Link to={RouteConstants.DASHBOARD}>Home</Link>
                     </li>
                     <li className="breadcrumb-item active">Blank Page</li>
                   </ol>
@@ -62,7 +68,14 @@ export default function Dashboard() {
           </section>
           {/* /.content */}
         </div>
-      </MainLayout>
+        {/* /.content-wrapper */}
+        <Footer/>
+        {/* Control Sidebar */}
+        <aside className="control-sidebar control-sidebar-dark">
+          {/* Control sidebar content goes here */}
+        </aside>
+        {/* /.control-sidebar */}
+      </div>
     </>
   );
 }

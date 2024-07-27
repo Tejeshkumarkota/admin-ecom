@@ -1,8 +1,10 @@
 import React from "react";
-import MainLayout from "./MainLayout";
+import MainLayout from "../../shared/_components/MainLayout";
+import { RouteConstants } from "../../shared/constants/RouteConstants";
+import { Link } from "react-router-dom";
 
-export default function ClassEdit() {
-  let pageTitle = "Edit Class";
+export default function Dashboard() {
+  let pageTitle = "Dashboard";
   return (
     <>
       <MainLayout>
@@ -17,9 +19,9 @@ export default function ClassEdit() {
                 <div className="col-sm-6">
                   <ol className="breadcrumb float-sm-right">
                     <li className="breadcrumb-item">
-                      <a href="#">Home</a>
+                      <Link to={RouteConstants.DASHBOARD}>Home</Link>
                     </li>
-                    <li className="breadcrumb-item active">Blank Page</li>
+                    <li className="breadcrumb-item active">Dashboard</li>
                   </ol>
                 </div>
               </div>

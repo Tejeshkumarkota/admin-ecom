@@ -1,17 +1,18 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { RouteConstants } from "../../shared/constants/RouteConstants";
 
 export default function Login() {
   const nav = useNavigate();
 
   const goToDashboard = () => {
-    nav("/dashboard");
+    nav(RouteConstants.DASHBOARD);
   };
   return (
     <div className="login-page">
       <div className="login-box">
         <div className="login-logo">
-          <Link to="/">
+          <Link to={RouteConstants.LOGIN}>
             <b>e-Commerce</b> Admin
           </Link>
         </div>
@@ -69,8 +70,8 @@ export default function Login() {
               <Link to="forgot-password.html">I forgot my password</Link>
             </p>
             <p className="mb-0">
-              <Link to="register.html" className="text-center">
-                Register a new membership
+              <Link to={RouteConstants.REGISTER} className="text-center">
+                Register
               </Link>
             </p>
           </div>

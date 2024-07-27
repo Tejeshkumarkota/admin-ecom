@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { RouteConstants } from "../constants/RouteConstants";
 
 export default function Sidebar() {
   return (
@@ -7,7 +8,7 @@ export default function Sidebar() {
       {/* Main Sidebar Container */}
       <aside className="main-sidebar sidebar-dark-primary elevation-4">
         {/* Brand Logo */}
-        <Link to="/dashboard" className="brand-link">
+        <Link to={RouteConstants.DASHBOARD} className="brand-link">
           <img
             src="/assets/AdminLTE-3.2.0/dist/img/AdminLTELogo.png"
             alt="eCom Logo"
@@ -30,7 +31,7 @@ export default function Sidebar() {
               {/* Add icons to the links using the .nav-icon class
          with font-awesome or any other icon font library */}
               <li className="nav-item">
-                <Link to="/dashboard" className="nav-link">
+                <Link to={RouteConstants.DASHBOARD} className="nav-link">
                   <i className="nav-icon fas fa-tachometer-alt" />
                   <p>
                     Dashboard
@@ -38,7 +39,7 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/classes-list" className="nav-link">
+                <Link to={RouteConstants.CLASSES_LIST} className="nav-link">
                   <i className="nav-icon fas fa-tachometer-alt" />
                   <p>
                     Classes List
@@ -46,7 +47,7 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/classes-list/create" className="nav-link">
+                <Link to={RouteConstants.CLASSES_CREATE} className="nav-link">
                   <i className="nav-icon fas fa-tachometer-alt" />
                   <p>
                     Classes Create
@@ -54,7 +55,7 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/blank-page" className="nav-link">
+                <Link to={RouteConstants.BLANK} className="nav-link">
                   <i className="nav-icon fas fa-th" />
                   <p>
                     Blank Page
